@@ -1,0 +1,54 @@
+.vendor {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 10px;
+  width: auto;
+}
+
+.vendor {
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+}
+
+/* @media screen and (max-width: 720px) and (min-width: 360px) {
+  .vendor {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: centre;
+  }
+} */
+
+.vendor img {
+  max-width: 100%;
+  height: 50%;
+  margin-bottom: 10px;
+}
+
+.number {
+  font-weight: bold;
+  color: #888;
+}
+
+.vendor h2 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.vendor p {
+  color: #777;
+}
+
+/* Create a grid layout for vendors  .vendor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+} */

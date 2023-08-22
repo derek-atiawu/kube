@@ -1,0 +1,20 @@
+.welcome {
+  text-align: left;
+  background-color: bisque;
+}
+
+.order {
+  background-color: aqua;
+}
+
+.vendor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  /* background-color: blue; */
+}
+
+.kube8 img {
+  height: 400px;
+  width: 650px;
+}
