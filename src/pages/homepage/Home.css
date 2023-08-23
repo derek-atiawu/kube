@@ -5,6 +5,7 @@
 
 .order {
   background-color: aqua;
+  margin-bottom: 10px;
 }
 
 .vendor-grid {
@@ -14,7 +15,7 @@
   /* background-color: blue; */
 }
 
-.kube8 img {
+/* .kube8 img {
   height: 400px;
   width: 650px;
-}
+} */
