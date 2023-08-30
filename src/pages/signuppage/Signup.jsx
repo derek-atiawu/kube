@@ -1,32 +1,57 @@
+import { useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 
 function Signup() {
-  return (
-    <Form>
-      <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
-        <Form.Label column sm="2">
-          Email
-        </Form.Label>
-        <Col sm="10">
-          <Form.Control type="text" placeholder="email" />
-        </Col>
-      </Form.Group>
+  const [name, setName] = useState("");
+  const [tradename, setTradename] = useState("");
+  const [phonenumber, setPhonenumber] = useState("");
+  const [image, setImage] = useState("");
+  const [location, setLocation] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const vendor = {
+      name: name,
+      tradename: tradename,
+      phonenumber: phonenumber,
+      image: image,
+      location: location,
+    };
+    console.log(vendor);
+  };
+
+  return (
+    <Form onSubmit={handleSubmit}>
       <Form.Group as={Row} className="mb-3" controlId="formPlainfname">
         <Form.Label column sm="2">
-          First Name
+          Name
         </Form.Label>
         <Col sm="10">
-          <Form.Control type="text" placeholder="First Name" />
+          <Form.Control
+            type="name"
+            value={name}
+            placeholder=" Full Name"
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
         </Col>
       </Form.Group>
 
       <Form.Group as={Row} className="mb-3" controlId="formPlainlname">
         <Form.Label column sm="2">
-          Last Name
+          Trade Name
         </Form.Label>
         <Col sm="10">
-          <Form.Control type="text" placeholder="Last Name" />
+          <Form.Control
+            type="tradename"
+            value={tradename}
+            placeholder="Your Business Name"
+            onChange={(e) => {
+              setTradename(e.target.value);
+            }}
+          />
         </Col>
       </Form.Group>
 
@@ -35,16 +60,30 @@ function Signup() {
           Phone number
         </Form.Label>
         <Col sm="10">
-          <Form.Control type="tel" placeholder="Phone Number" />
+          <Form.Control
+            type="tel"
+            value={phonenumber}
+            placeholder="Phone Number"
+            onChange={(e) => {
+              setPhonenumber(e.target.value);
+            }}
+          />
         </Col>
       </Form.Group>
 
       <Form.Group as={Row} className="mb-3" controlId="formPlainGhanacard">
         <Form.Label column sm="2">
-          Ghana Card ID
+          image
         </Form.Label>
         <Col sm="10">
-          <Form.Control type="text" placeholder="Ghana Card Number" />
+          <Form.Control
+            type="text"
+            value={image}
+            placeholder="Ghana Card Number"
+            onChange={(e) => {
+              setImage(e.target.value);
+            }}
+          />
         </Col>
       </Form.Group>
 
@@ -53,7 +92,12 @@ function Signup() {
           Location
         </Form.Label>
         <Col sm="10">
-          <Form.Select>
+          <Form.Select
+            value={location}
+            onChange={(e) => {
+              setLocation(e.target.value);
+            }}
+          >
             <option value="Select Location">Select Your Location</option>
             <option value="Greater Accra">Greater Accra</option>
             <option value="Ashanti Region">Ashanti Region</option>
@@ -67,14 +111,6 @@ function Signup() {
         </Col>
       </Form.Group>
 
-      <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
-        <Form.Label column sm="2">
-          Password
-        </Form.Label>
-        <Col sm="10">
-          <Form.Control type="password" placeholder="Password" />
-        </Col>
-      </Form.Group>
       <Button variant="primary" type="submit">
         Submit
       </Button>

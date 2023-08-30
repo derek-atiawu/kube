@@ -71,12 +71,12 @@
 
 // export default Home;
 
-import React from 'react';
-import './Home.css';
-import Vendor from '../../component/Vendor';
-import { Vendors } from '../../component/Vendors';
-import Row from 'react-bootstrap/Row';
-import Image from 'react-bootstrap/Image';
+import React from "react";
+import "./Home.css";
+import Vendor from "../../component/Vendor";
+import { Vendors } from "../../component/Vendors";
+import Row from "react-bootstrap/Row";
+import Image from "react-bootstrap/Image";
 
 function Home() {
   return (
@@ -84,11 +84,11 @@ function Home() {
       <div className="container-fluid indcont1">
         <div className="row">
           <div className=" col-xs-12 col-md-4">
-            <p style={{ fontSize: '300%' }}>
+            <p style={{ fontSize: "300%" }}>
               <b>
-                Enjoy Ghana's <span style={{ color: 'green' }}>Kube</span>{' '}
-                <br />{' '}
-                <span style={{ color: 'blue' }}>Healthy and Refreshing </span>
+                Enjoy Ghana's <span style={{ color: "green" }}>Kube</span>{" "}
+                <br />{" "}
+                <span style={{ color: "blue" }}>Healthy and Refreshing </span>
               </b>
             </p>
             <p>
@@ -102,7 +102,7 @@ function Home() {
               src="..//images/kube8.jpg"
               className="img-responsive"
               alt="kube8"
-  /> */}
+            /> */}
           </div>
         </div>
 
@@ -111,13 +111,13 @@ function Home() {
           <section>
             <form>
               <label>Location:</label>
-              <input type="text" name="example" style={{ margin: '1rem 0' }} />
+              <input type="text" name="example" style={{ margin: "1rem 0" }} />
 
               <label>Quantity:</label>
               <input
                 type="number"
                 name="example"
-                style={{ margin: '1rem 0' }}
+                style={{ margin: "1rem 0" }}
               />
             </form>
           </section>
